@@ -35,47 +35,11 @@ naughty.connect_signal("request::display_error", function(message, startup)
 		message = message,
 	})
 end)
--- }}}
 
--- Credits forum reddit...
---[[ awesome.connect_signal('exit', function(reason_restart)
-    if not reason_restart then return end
- 
-    local file = io.open('/tmp/awesomewm-last-selected-tags', 'w+')
- 
-    for s in screen do
-       file:write(s.selected_tag.index, '\n') 
-    end
- 
-    file:close()
- end) ]]
-
---[[ awesome.connect_signal('startup', function()
-    local file = io.open('/tmp/awesomewm-last-selected-tags', 'r')
-    if not file then return end
- 
-    local selected_tags = {}
- 
-    for line in file:lines() do
-       table.insert(selected_tags, tonumber(line))
-    end
-    
-    for s in screen do
-       local i = selected_tags[s.index]
-       local t = s.tags[i]
-       t:view_only()
-    end
- 
-    file:close()
- end) ]]
-
---beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
 
 modkey = "Mod4"
 
---mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
---                                     menu = mymainmenu })
 mylauncher = awful.widget.launcher({
 	image = gears.filesystem.get_configuration_dir() .. "icon-terrablade.png",
 	command = "rofi -no-lazy-grab -show drun -modi drun -theme "
@@ -117,8 +81,6 @@ screen.connect_signal("request::wallpaper", function(s)
 	})
 end)
 -- }}}
-
--- mykeyboardlayout = awful.widget.keyboardlayout()
 
 mytextclock = wibox.widget.textclock()
 
@@ -472,7 +434,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		height = 30,
 		margins = {
 			top = -108,
-			right = 176,
+			right = 210,
 		},
 		align = "right",
 		widget = {
@@ -499,7 +461,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		height = 30,
 		margins = {
 			top = -138,
-			right = 376,
+			right = 410,
 		},
 		align = "right",
 		widget = {
