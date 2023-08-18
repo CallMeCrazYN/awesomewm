@@ -1,0 +1,12 @@
+* {
+    background:     #1E2127FF;
+    background-alt: #282B31FF;
+    foreground:     #FFFFFFFF;
+    selected:       #8a2b45;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
+}
+
+* {
+    font: "Hack Nerd Font 9";
+}
