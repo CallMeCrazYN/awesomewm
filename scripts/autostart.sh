@@ -40,9 +40,7 @@ run volctl &
 # MPD
 run mpd ~/.config/mpd/mpd.conf &
 
-# set keyboard layout
-setxkbmap de koy
-
 # powermanager for brighness control for now
 run xfce4-power-manager
+
 
